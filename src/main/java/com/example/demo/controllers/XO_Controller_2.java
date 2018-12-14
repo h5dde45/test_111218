@@ -14,21 +14,22 @@ public class XO_Controller_2 {
     @Autowired
     private XO_Service_2 xo_service_2;
 
-    @GetMapping
+    @GetMapping()
     public String xob(Model model) {
+        xo_service_2.update();
         model.addAttribute("cards", xo_service_2.getCards());
         return "xob";
     }
 
     @GetMapping("{id}")
-    public String xobId(@PathVariable Integer id, Model model) {
+    public String xobIdB(@PathVariable Integer id, Model model) {
         xo_service_2.addPlayer(id);
         model.addAttribute("cards", xo_service_2.getCards());
         return "xob";
     }
 
     @GetMapping("update")
-    public String update() {
+    public String updateB() {
         xo_service_2.update();
         return "redirect:";
     }

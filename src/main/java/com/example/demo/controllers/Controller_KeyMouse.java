@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 @RequestMapping("/keymouse")
-public class Controller_3 {
+public class Controller_KeyMouse {
     @GetMapping
     public String keymouse() {
         return "keyboard _and_mouse_tester";

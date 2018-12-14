@@ -24,16 +24,6 @@ public class XO_Service_2 {
 
     public void addPlayer(Integer id) {
         player.add(id);
-        if (player.size() >= 5) {
-            player.clear();
-            computer.clear();
-            for (int i = 0; i < 9; i++) {
-                cards.get(i).setColorInfo("btn-info");
-                cards.get(i).setBadge("");
-                cards.get(i).setDisable("");
-            }
-            return;
-        }
         cards.get(id).setColorInfo("btn-light");
         cards.get(id).setBadge("X");
         cards.get(id).setDisable("disabled");
@@ -46,6 +36,16 @@ public class XO_Service_2 {
             }
             for (Integer i:template){
                 cards.get(i).setDisable("disabled");
+            }
+            return;
+        }
+        if (player.size() == 5) {
+            player.clear();
+            computer.clear();
+            for (int i = 0; i < 9; i++) {
+                cards.get(i).setColorInfo("btn-info");
+                cards.get(i).setBadge("");
+                cards.get(i).setDisable("");
             }
             return;
         }
