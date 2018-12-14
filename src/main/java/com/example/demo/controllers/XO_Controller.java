@@ -24,42 +24,12 @@ public class XO_Controller {
         return "xoa";
     }
 
-    @GetMapping("b")
-    public String xob() {
-        return "xob";
-    }
-
-    private String checkHod(int hod, boolean b) {
-        if (b) {
-            if (hod % 2 == 0) {
-                return "Выиграл 1 игрок";
-            } else {
-                return "Выиграл 2 игрок";
-            }
-        } else {
-            return "";
-        }
-    }
-
     @GetMapping(value = "a/{num}/{hod}")
     @ResponseBody
     public String xoaG(@PathVariable int num,
                        @PathVariable int hod) {
         boolean b = xo_service.checkWinner(num, hod);
-        return checkHod(hod, b);
+        return xo_service.checkHod(hod, b);
     }
 
-    @GetMapping(value = "b/{num}/{hod}")
-    @ResponseBody
-    public String xobG(@PathVariable int num,
-                       @PathVariable int hod) {
-        boolean b = xo_service.checkWinner(num, hod);
-        return checkHod(hod, b);
-    }
-
-    @GetMapping(value = "b/ai")
-    @ResponseBody
-    public String xobGai() {
-        return xo_service.bai();
-    }
 }

@@ -4,7 +4,6 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 
 @Service
 public class XO_Service {
@@ -12,7 +11,7 @@ public class XO_Service {
     private List<Integer> player2 = new ArrayList<>();
 
     public boolean checkWinner(int num, int hod) {
-        if (hod==0){
+        if (hod == 0) {
             player1.clear();
             player2.clear();
         }
@@ -49,21 +48,15 @@ public class XO_Service {
         return false;
     }
 
-    public String bai() {
-        int num = 0;
-        List<Integer> result = new ArrayList<>();
-        List<Integer> temp1 = new ArrayList<>(player1);
-        temp1.addAll(player2);
-        List<Integer> template = new ArrayList<>();
-        for (int i = 0; i < 9; i++) {
-            template.add(i);
-        }
-        for (Integer integer : template) {
-            if (!temp1.contains(integer)) {
-                result.add(integer);
+    public String checkHod(int hod, boolean b) {
+        if (b) {
+            if (hod % 2 == 0) {
+                return "Выиграл 1 игрок";
+            } else {
+                return "Выиграл 2 игрок";
             }
+        } else {
+            return "";
         }
-        num = result.get((new Random()).nextInt(result.size()));
-        return String.valueOf(num);
     }
 }
