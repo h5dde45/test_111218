@@ -40,6 +40,20 @@ public class XO_Service {
             player2.clear();
             return true;
         }
+        if (
+                player1.contains(0) && player1.contains(4) && player1.contains(8) ||
+                player1.contains(2) && player1.contains(4) && player1.contains(6)) {
+            player1.clear();
+            player2.clear();
+            return true;
+        }
+        if (
+                player2.contains(0) && player2.contains(4) && player2.contains(8) ||
+                player2.contains(2) && player2.contains(4) && player2.contains(6)) {
+            player1.clear();
+            player2.clear();
+            return true;
+        }
         if (hod == 8) {
             player1.clear();
             player2.clear();

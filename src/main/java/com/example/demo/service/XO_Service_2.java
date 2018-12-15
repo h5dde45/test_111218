@@ -28,13 +28,13 @@ public class XO_Service_2 {
         cards.get(id).setBadge("X");
         cards.get(id).setDisable("disabled");
         if (checkPlayer()) {
-            for (Integer i:player){
+            for (Integer i : player) {
                 cards.get(i).setColorInfo("btn-success");
             }
-            for (Integer i:computer){
+            for (Integer i : computer) {
                 cards.get(i).setColorInfo("btn-danger");
             }
-            for (Integer i:template){
+            for (Integer i : template) {
                 cards.get(i).setDisable("disabled");
             }
             return;
@@ -58,7 +58,9 @@ public class XO_Service_2 {
                 player.contains(6) && player.contains(7) && player.contains(8) ||
                 player.contains(0) && player.contains(3) && player.contains(6) ||
                 player.contains(1) && player.contains(4) && player.contains(7) ||
-                player.contains(2) && player.contains(5) && player.contains(8));
+                player.contains(2) && player.contains(5) && player.contains(8)) ||
+                player.contains(0) && player.contains(4) && player.contains(8) ||
+                player.contains(2) && player.contains(4) && player.contains(6);
     }
 
     private boolean checkComputer() {
@@ -67,7 +69,9 @@ public class XO_Service_2 {
                 computer.contains(6) && computer.contains(7) && computer.contains(8) ||
                 computer.contains(0) && computer.contains(3) && computer.contains(6) ||
                 computer.contains(1) && computer.contains(4) && computer.contains(7) ||
-                computer.contains(2) && computer.contains(5) && computer.contains(8));
+                computer.contains(2) && computer.contains(5) && computer.contains(8)) ||
+                computer.contains(0) && computer.contains(4) && computer.contains(8) ||
+                computer.contains(2) && computer.contains(4) && computer.contains(6);
     }
 
     private void addComputer() {
@@ -84,13 +88,13 @@ public class XO_Service_2 {
         cards.get(id).setDisable("disabled");
 
         if (checkComputer()) {
-            for (Integer i:computer){
+            for (Integer i : computer) {
                 cards.get(i).setColorInfo("btn-success");
             }
-            for (Integer i: player){
+            for (Integer i : player) {
                 cards.get(i).setColorInfo("btn-danger");
             }
-            for (Integer i:template){
+            for (Integer i : template) {
                 cards.get(i).setDisable("disabled");
             }
         }
