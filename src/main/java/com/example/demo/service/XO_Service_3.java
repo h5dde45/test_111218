@@ -85,8 +85,74 @@ public class XO_Service_3 {
                 computer.add(id);
             }
         }
+        if (player.size() == 2) {
+            if (player.contains(4)) {
+                if (computer.contains(0) && player.contains(2)) {
+                    id = 3;
+                    computer.add(id);
+                    playerFlag = false;
+                }
+                if (computer.contains(0) && player.contains(8)  && playerFlag) {
+                    id = 3;
+                    computer.add(id);
+                    playerFlag = false;
+                }
+                if (computer.contains(0) && player.contains(6)  && playerFlag) {
+                    id = 1;
+                    computer.add(id);
+                    playerFlag = false;
+                }
+                if (computer.contains(2) && player.contains(8)  && playerFlag) {
+                    id = 1;
+                    computer.add(id);
+                    playerFlag = false;
+                }
+                if (computer.contains(2) && player.contains(6)  && playerFlag) {
+                    id = 1;
+                    computer.add(id);
+                    playerFlag = false;
+                }
+                if (computer.contains(2) && player.contains(0)  && playerFlag) {
+                    id = 5;
+                    computer.add(id);
+                    playerFlag = false;
+                }
+                if (computer.contains(8) && player.contains(6)  && playerFlag) {
+                    id = 5;
+                    computer.add(id);
+                    playerFlag = false;
+                }
+                if (computer.contains(8) && player.contains(0)  && playerFlag) {
+                    id = 5;
+                    computer.add(id);
+                    playerFlag = false;
+                }
+                if (computer.contains(8) && player.contains(2)  && playerFlag) {
+                    id = 7;
+                    computer.add(id);
+                    playerFlag = false;
+                }
+                if (computer.contains(6) && player.contains(0)  && playerFlag) {
+                    id = 7;
+                    computer.add(id);
+                    playerFlag = false;
+                }
+                if (computer.contains(6) && player.contains(2)  && playerFlag) {
+                    id = 7;
+                    computer.add(id);
+                    playerFlag = false;
+                }
+                if (computer.contains(6) && player.contains(8)  && playerFlag) {
+                    id = 3;
+                    computer.add(id);
+                    playerFlag = false;
+                }
+            }
+        }
         if (player.size() >= 2) {
-            if (computer.contains(0) && computer.contains(1) && !player.contains(2)) {
+
+//            =======================
+            if (computer.contains(0) && computer.contains(1) && !player.contains(2) && playerFlag) {
                 id = 2;
                 computer.add(id);
                 playerFlag = false;
