@@ -156,8 +156,8 @@ public class XO_Service_3 {
 //        }
         if (player.size() >= 2) {
 
-//            =======================
-            if (computer.contains(0) && computer.contains(4) && !player.contains(8) ) {
+//            ======================= проверка на 3 зеленых
+            if (computer.contains(0) && computer.contains(4) && !player.contains(8)) {
                 id = 8;
                 computer.add(id);
                 playerFlag = false;
@@ -188,7 +188,6 @@ public class XO_Service_3 {
                 playerFlag = false;
             }
 
-//            ===============================
             if (computer.contains(0) && computer.contains(1) && !player.contains(2) && playerFlag) {
                 id = 2;
                 computer.add(id);
@@ -285,7 +284,7 @@ public class XO_Service_3 {
                 playerFlag = false;
             }
 
-//            ============================================================
+//            ======================== блокировка 3 зеленых
             if (player.contains(0) && player.contains(4) && !computer.contains(8) && playerFlag) {
                 id = 8;
                 computer.add(id);
@@ -413,6 +412,80 @@ public class XO_Service_3 {
                 computer.add(id);
                 playerFlag = false;
             }
+
+//            ============= блокировка 2-го хода 1x-центр
+
+            if (computer.contains(0) && player.contains(4) && player.contains(8) && playerFlag) {
+                id = 2;
+                computer.add(id);
+                playerFlag = false;
+            }
+            if (computer.contains(2) && player.contains(4) && player.contains(6) && playerFlag) {
+                id = 8;
+                computer.add(id);
+                playerFlag = false;
+            }
+            if (computer.contains(8) && player.contains(4) && player.contains(0) && playerFlag) {
+                id = 6;
+                computer.add(id);
+                playerFlag = false;
+            }
+            if (computer.contains(6) && player.contains(4) && player.contains(2) && playerFlag) {
+                id = 0;
+                computer.add(id);
+                playerFlag = false;
+            }
+
+            //            ============= блокировка 2-го хода 1x-угловой
+
+            if (player.contains(0) && player.contains(5) && computer.contains(4) && playerFlag) {
+                id = 2;
+                computer.add(id);
+                playerFlag = false;
+            }
+
+            if (player.contains(0) && player.contains(7) && computer.contains(4) && playerFlag) {
+                id = 6;
+                computer.add(id);
+                playerFlag = false;
+            }
+
+            if (player.contains(2) && player.contains(7) && computer.contains(4) && playerFlag) {
+                id = 8;
+                computer.add(id);
+                playerFlag = false;
+            }
+
+            if (player.contains(2) && player.contains(3) && computer.contains(4) && playerFlag) {
+                id = 0;
+                computer.add(id);
+                playerFlag = false;
+            }
+
+            if (player.contains(8) && player.contains(3) && computer.contains(4) && playerFlag) {
+                id = 6;
+                computer.add(id);
+                playerFlag = false;
+            }
+
+            if (player.contains(8) && player.contains(1) && computer.contains(4) && playerFlag) {
+                id = 2;
+                computer.add(id);
+                playerFlag = false;
+            }
+
+            if (player.contains(6) && player.contains(5) && computer.contains(4) && playerFlag) {
+                id = 8;
+                computer.add(id);
+                playerFlag = false;
+            }
+
+            if (player.contains(6) && player.contains(1) && computer.contains(4) && playerFlag) {
+                id = 0;
+                computer.add(id);
+                playerFlag = false;
+            }
+
 
             Integer playerId = player.get(player.size() - 1);
             List<Integer> uneven = Stream.of(1, 3, 5, 7).collect(Collectors.toList());
