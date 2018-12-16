@@ -89,75 +89,242 @@ public class XO_Service_3 {
                 computer.add(id);
             }
         }
-//        if (player.size() == 2) {
-//            if (player.contains(4)) {
-//                //============
-//                if (computer.contains(0) && player.contains(2)) {
-//                    id = 3;
-//                    computer.add(id);
-//                    playerFlag = false;
-//                }
-//                if (computer.contains(0) && player.contains(8)  && playerFlag) {
-//                    id = 3;
-//                    computer.add(id);
-//                    playerFlag = false;
-//                }
-//                if (computer.contains(0) && player.contains(6)  && playerFlag) {
-//                    id = 1;
-//                    computer.add(id);
-//                    playerFlag = false;
-//                }
-//                if (computer.contains(2) && player.contains(8)  && playerFlag) {
-//                    id = 1;
-//                    computer.add(id);
-//                    playerFlag = false;
-//                }
-//                if (computer.contains(2) && player.contains(6)  && playerFlag) {
-//                    id = 1;
-//                    computer.add(id);
-//                    playerFlag = false;
-//                }
-//                if (computer.contains(2) && player.contains(0)  && playerFlag) {
-//                    id = 5;
-//                    computer.add(id);
-//                    playerFlag = false;
-//                }
-//                if (computer.contains(8) && player.contains(6)  && playerFlag) {
-//                    id = 5;
-//                    computer.add(id);
-//                    playerFlag = false;
-//                }
-//                if (computer.contains(8) && player.contains(0)  && playerFlag) {
-//                    id = 5;
-//                    computer.add(id);
-//                    playerFlag = false;
-//                }
-//                if (computer.contains(8) && player.contains(2)  && playerFlag) {
-//                    id = 7;
-//                    computer.add(id);
-//                    playerFlag = false;
-//                }
-//                if (computer.contains(6) && player.contains(0)  && playerFlag) {
-//                    id = 7;
-//                    computer.add(id);
-//                    playerFlag = false;
-//                }
-//                if (computer.contains(6) && player.contains(2)  && playerFlag) {
-//                    id = 7;
-//                    computer.add(id);
-//                    playerFlag = false;
-//                }
-//                if (computer.contains(6) && player.contains(8)  && playerFlag) {
-//                    id = 3;
-//                    computer.add(id);
-//                    playerFlag = false;
-//                }
-//            }
-//        }
+
+        if (player.size() == 2) {
+
+//            ======================== блокировка 3 зеленых
+            if (player.contains(0) && player.contains(4) && !computer.contains(8)) {
+                id = 8;
+                computer.add(id);
+                playerFlag = false;
+            }
+            if (player.contains(0) && player.contains(8) && !computer.contains(4) && playerFlag) {
+                id = 4;
+                computer.add(id);
+                playerFlag = false;
+            }
+            if (player.contains(4) && player.contains(8) && !computer.contains(0) && playerFlag) {
+                id = 0;
+                computer.add(id);
+                playerFlag = false;
+            }
+            if (player.contains(2) && player.contains(4) && !computer.contains(6) && playerFlag) {
+                id = 6;
+                computer.add(id);
+                playerFlag = false;
+            }
+            if (player.contains(2) && player.contains(6) && !computer.contains(4) && playerFlag) {
+                id = 4;
+                computer.add(id);
+                playerFlag = false;
+            }
+            if (player.contains(4) && player.contains(6) && !computer.contains(2) && playerFlag) {
+                id = 2;
+                computer.add(id);
+                playerFlag = false;
+            }
+
+            if (player.contains(0) && player.contains(1) && !computer.contains(2) && playerFlag) {
+                id = 2;
+                computer.add(id);
+                playerFlag = false;
+            }
+            if (player.contains(0) && player.contains(2) && !computer.contains(1) && playerFlag) {
+                id = 1;
+                computer.add(id);
+                playerFlag = false;
+            }
+            if (player.contains(1) && player.contains(2) && !computer.contains(0) && playerFlag) {
+                id = 0;
+                computer.add(id);
+                playerFlag = false;
+            }
+
+            if (player.contains(3) && player.contains(4) && !computer.contains(5) && playerFlag) {
+                id = 5;
+                computer.add(id);
+                playerFlag = false;
+            }
+            if (player.contains(3) && player.contains(5) && !computer.contains(4) && playerFlag) {
+                id = 4;
+                computer.add(id);
+                playerFlag = false;
+            }
+            if (player.contains(4) && player.contains(5) && !computer.contains(3) && playerFlag) {
+                id = 3;
+                computer.add(id);
+                playerFlag = false;
+            }
+
+            if (player.contains(6) && player.contains(7) && !computer.contains(8) && playerFlag) {
+                id = 8;
+                computer.add(id);
+                playerFlag = false;
+            }
+            if (player.contains(6) && player.contains(8) && !computer.contains(7) && playerFlag) {
+                id = 7;
+                computer.add(id);
+                playerFlag = false;
+            }
+            if (player.contains(7) && player.contains(8) && !computer.contains(6) && playerFlag) {
+                id = 6;
+                computer.add(id);
+                playerFlag = false;
+            }
+
+            if (player.contains(0) && player.contains(3) && !computer.contains(6) && playerFlag) {
+                id = 6;
+                computer.add(id);
+                playerFlag = false;
+            }
+            if (player.contains(0) && player.contains(6) && !computer.contains(3) && playerFlag) {
+                id = 3;
+                computer.add(id);
+                playerFlag = false;
+            }
+            if (player.contains(3) && player.contains(6) && !computer.contains(0) && playerFlag) {
+                id = 0;
+                computer.add(id);
+                playerFlag = false;
+            }
+
+            if (player.contains(1) && player.contains(4) && !computer.contains(7) && playerFlag) {
+                id = 7;
+                computer.add(id);
+                playerFlag = false;
+            }
+            if (player.contains(1) && player.contains(7) && !computer.contains(4) && playerFlag) {
+                id = 4;
+                computer.add(id);
+                playerFlag = false;
+            }
+            if (player.contains(4) && player.contains(7) && !computer.contains(1) && playerFlag) {
+                id = 1;
+                computer.add(id);
+                playerFlag = false;
+            }
+
+            if (player.contains(2) && player.contains(5) && !computer.contains(8) && playerFlag) {
+                id = 8;
+                computer.add(id);
+                playerFlag = false;
+            }
+            if (player.contains(2) && player.contains(8) && !computer.contains(5) && playerFlag) {
+                id = 5;
+                computer.add(id);
+                playerFlag = false;
+            }
+            if (player.contains(5) && player.contains(8) && !computer.contains(2) && playerFlag) {
+                id = 2;
+                computer.add(id);
+                playerFlag = false;
+            }
+
+
+//            ============= блокировка 2-го хода 1x-центр
+
+            if (computer.contains(0) && player.contains(4) && player.contains(8) && playerFlag) {
+                id = 2;
+                computer.add(id);
+                playerFlag = false;
+            }
+            if (computer.contains(2) && player.contains(4) && player.contains(6) && playerFlag) {
+                id = 8;
+                computer.add(id);
+                playerFlag = false;
+            }
+            if (computer.contains(8) && player.contains(4) && player.contains(0) && playerFlag) {
+                id = 6;
+                computer.add(id);
+                playerFlag = false;
+            }
+            if (computer.contains(6) && player.contains(4) && player.contains(2) && playerFlag) {
+                id = 0;
+                computer.add(id);
+                playerFlag = false;
+            }
+
+            //            ============= блокировка 2-го хода 1x-угловой
+
+            if (player.contains(0) && player.contains(5) && computer.contains(4) && playerFlag) {
+                id = 2;
+                computer.add(id);
+                playerFlag = false;
+            }
+
+            if (player.contains(0) && player.contains(7) && computer.contains(4) && playerFlag) {
+                id = 6;
+                computer.add(id);
+                playerFlag = false;
+            }
+
+            if (player.contains(2) && player.contains(7) && computer.contains(4) && playerFlag) {
+                id = 8;
+                computer.add(id);
+                playerFlag = false;
+            }
+
+            if (player.contains(2) && player.contains(3) && computer.contains(4) && playerFlag) {
+                id = 0;
+                computer.add(id);
+                playerFlag = false;
+            }
+
+            if (player.contains(8) && player.contains(3) && computer.contains(4) && playerFlag) {
+                id = 6;
+                computer.add(id);
+                playerFlag = false;
+            }
+
+            if (player.contains(8) && player.contains(1) && computer.contains(4) && playerFlag) {
+                id = 2;
+                computer.add(id);
+                playerFlag = false;
+            }
+
+            if (player.contains(6) && player.contains(5) && computer.contains(4) && playerFlag) {
+                id = 8;
+                computer.add(id);
+                playerFlag = false;
+            }
+
+            if (player.contains(6) && player.contains(1) && computer.contains(4) && playerFlag) {
+                id = 0;
+                computer.add(id);
+                playerFlag = false;
+            }
+
+            //            ============= блокировка 2-го хода 1x-средний
+
+            if (player.contains(1) && player.contains(3) && computer.contains(4) && playerFlag) {
+                id = 0;
+                computer.add(id);
+                playerFlag = false;
+            }
+
+            if (player.contains(1) && player.contains(5) && computer.contains(4) && playerFlag) {
+                id = 2;
+                computer.add(id);
+                playerFlag = false;
+            }
+
+            if (player.contains(5) && player.contains(7) && computer.contains(4) && playerFlag) {
+                id = 8;
+                computer.add(id);
+                playerFlag = false;
+            }
+
+            if (player.contains(7) && player.contains(3) && computer.contains(4) && playerFlag) {
+                id = 6;
+                computer.add(id);
+                playerFlag = false;
+            }
+        }
+
         if (player.size() >= 2) {
 
 //            ======================= проверка на 3 зеленых
-            if (computer.contains(0) && computer.contains(4) && !player.contains(8)) {
+            if (computer.contains(0) && computer.contains(4) && !player.contains(8) && playerFlag) {
                 id = 8;
                 computer.add(id);
                 playerFlag = false;
@@ -316,7 +483,6 @@ public class XO_Service_3 {
                 playerFlag = false;
             }
 
-
             if (player.contains(0) && player.contains(1) && !computer.contains(2) && playerFlag) {
                 id = 2;
                 computer.add(id);
@@ -409,105 +575,6 @@ public class XO_Service_3 {
             }
             if (player.contains(5) && player.contains(8) && !computer.contains(2) && playerFlag) {
                 id = 2;
-                computer.add(id);
-                playerFlag = false;
-            }
-
-//            ============= блокировка 2-го хода 1x-центр
-
-            if (computer.contains(0) && player.contains(4) && player.contains(8) && playerFlag) {
-                id = 2;
-                computer.add(id);
-                playerFlag = false;
-            }
-            if (computer.contains(2) && player.contains(4) && player.contains(6) && playerFlag) {
-                id = 8;
-                computer.add(id);
-                playerFlag = false;
-            }
-            if (computer.contains(8) && player.contains(4) && player.contains(0) && playerFlag) {
-                id = 6;
-                computer.add(id);
-                playerFlag = false;
-            }
-            if (computer.contains(6) && player.contains(4) && player.contains(2) && playerFlag) {
-                id = 0;
-                computer.add(id);
-                playerFlag = false;
-            }
-
-            //            ============= блокировка 2-го хода 1x-угловой
-
-            if (player.contains(0) && player.contains(5) && computer.contains(4) && playerFlag) {
-                id = 2;
-                computer.add(id);
-                playerFlag = false;
-            }
-
-            if (player.contains(0) && player.contains(7) && computer.contains(4) && playerFlag) {
-                id = 6;
-                computer.add(id);
-                playerFlag = false;
-            }
-
-            if (player.contains(2) && player.contains(7) && computer.contains(4) && playerFlag) {
-                id = 8;
-                computer.add(id);
-                playerFlag = false;
-            }
-
-            if (player.contains(2) && player.contains(3) && computer.contains(4) && playerFlag) {
-                id = 0;
-                computer.add(id);
-                playerFlag = false;
-            }
-
-            if (player.contains(8) && player.contains(3) && computer.contains(4) && playerFlag) {
-                id = 6;
-                computer.add(id);
-                playerFlag = false;
-            }
-
-            if (player.contains(8) && player.contains(1) && computer.contains(4) && playerFlag) {
-                id = 2;
-                computer.add(id);
-                playerFlag = false;
-            }
-
-            if (player.contains(6) && player.contains(5) && computer.contains(4) && playerFlag) {
-                id = 8;
-                computer.add(id);
-                playerFlag = false;
-            }
-
-            if (player.contains(6) && player.contains(1) && computer.contains(4) && playerFlag) {
-                id = 0;
-                computer.add(id);
-                playerFlag = false;
-            }
-
-            //            ============= блокировка 2-го хода 1x-средний
-
-            if (player.contains(1) && player.contains(3) && computer.contains(4) && playerFlag) {
-                id = 0;
-                computer.add(id);
-                playerFlag = false;
-            }
-
-            if (player.contains(1) && player.contains(5) && computer.contains(4) && playerFlag) {
-                id = 2;
-                computer.add(id);
-                playerFlag = false;
-            }
-
-            if (player.contains(5) && player.contains(7) && computer.contains(4) && playerFlag) {
-                id = 8;
-                computer.add(id);
-                playerFlag = false;
-            }
-
-            if (player.contains(7) && player.contains(3) && computer.contains(4) && playerFlag) {
-                id = 6;
                 computer.add(id);
                 playerFlag = false;
             }
