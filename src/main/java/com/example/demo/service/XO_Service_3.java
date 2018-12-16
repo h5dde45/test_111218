@@ -486,6 +486,32 @@ public class XO_Service_3 {
                 playerFlag = false;
             }
 
+            //            ============= блокировка 2-го хода 1x-средний
+
+            if (player.contains(1) && player.contains(3) && computer.contains(4) && playerFlag) {
+                id = 0;
+                computer.add(id);
+                playerFlag = false;
+            }
+
+            if (player.contains(1) && player.contains(5) && computer.contains(4) && playerFlag) {
+                id = 2;
+                computer.add(id);
+                playerFlag = false;
+            }
+
+            if (player.contains(5) && player.contains(7) && computer.contains(4) && playerFlag) {
+                id = 8;
+                computer.add(id);
+                playerFlag = false;
+            }
+
+            if (player.contains(7) && player.contains(3) && computer.contains(4) && playerFlag) {
+                id = 6;
+                computer.add(id);
+                playerFlag = false;
+            }
+
 
             Integer playerId = player.get(player.size() - 1);
             List<Integer> uneven = Stream.of(1, 3, 5, 7).collect(Collectors.toList());
